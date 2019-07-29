@@ -1,0 +1,67 @@
+Data Types:
+1. Primitive : char, int , float, double => can store only one value
+2. Non Primitive : structure
+
+Structure gives a way by which we can group variable. It stores dissimilar elements.
+So by the means of STRUCTURE we can make a "Variable" in which we can store multiple
+variables.
+
+
+Defining structure : SYNTAX
+                    struct data{
+                        //member variable declaration;
+                        };
+                     So now "data" is a data type now.
+NOTE: No memory is consumed by declaring "struct". It is consumed when we call struct. 
+      so when we declare a variable using struct then at that time memory is consumed.
+      
+Example 1 of using STRUCT.
+struct data
+{
+int d,m,y;
+}
+
+int main()
+{
+Case I: "First method of initialization"
+struct data today(26,7,2015)             // d =26, m=7, y=2015
+//NOTE: using struct we have created a big variable "today", which will further have 3 variable in it "d","m","n"
+
+CaseII: "Second method of initialization"
+struct data today;
+today.d = 26;  // d =6       The Variable inside "today" variable are assigned with the values
+today.m = 7;   // m = 7
+today.y = 2015; // y = 2015
+
+scanf("%d%d%d",today.d,today.m,today.y); // taking input of user in today variable
+}
+
+####################################################################################################################################
+Use of Concept of pointer in STRUCT
+
+struct data
+{
+int m,n,p;
+}
+int main()
+{
+struct data *ptr;    // created a pointer "ptr" to "struct data" data type
+
+ptr = (struct data*)malloc(5*sizeof(struct data) // Dynamic memory allocation of "struct data" pointer (replace "struct data" with "int" and read then you will understand)
+
+ // storing data in 1st element of "ptr" array 
+ptr[0].m = 23;       
+ptr[0].n = 12;
+ptr[0].y = 2019;
+
+ // storing data in 2nd element of "ptr" array 
+ptr[1].m = 21;      
+ptr[1].n = 10;
+ptr[1].y = 2018;
+
+return 0;
+}
+
+
+                     
+
