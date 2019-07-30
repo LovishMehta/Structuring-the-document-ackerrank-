@@ -1,0 +1,25 @@
+1.
+STRINGS: In order to de-reference a string we never use de-reference operator.
+Link: http://www.c4learn.com/c-programming/c-pointer-within-structure/
+
+Case I: No need of de-refrence operator
+int main()
+{
+char *c;
+c = "hello";
+
+printf("%s",c); // No need of de-refence operator in case stings whereas we need de-refrence operator in other cases as shown below
+
+}
+
+Case II: Need of derefrence operator
+int main
+{
+char *c;
+int num = 10;
+c = &num;
+
+printf("%d",*c); // Here we need a de-refrence operator
+}
+
+###################################################################################################################################
